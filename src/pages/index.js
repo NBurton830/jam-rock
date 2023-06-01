@@ -4,117 +4,359 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
-
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+import "../components/index.css"
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
+    <section id="popular" class="module">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <div class="module-header wow fadeInUp animated">
+          <h2 class="module-title">Jam Rock Caribbean Cuisine</h2>
+          <h3 class="module-subtitle">
+            144 E Lincoln HWY.
+            Coatesville, PA 19320
+            610.850.9118
+          </h3>
+        </div>
+      </div>
     </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+
+    <div class="row">
+      <div class="col-sm-6">
+        <h3 class="menu-heading">Entrees</h3>
+
+        <div class="menu">
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Oxtail & Butter Beans</h4>
+              <div class="menu-detail">Deliciously seasoned with herbs and spices of Jamaica.</div>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$25</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Curry Goat</h4>
+              <div class="menu-detail">A Delicious mixture of Jamaican curry, Island herbs spices, and vegetables.</div>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$20</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Jerk Chicken</h4>
+              <div class="menu-detail">A mild or spicy combination of the Best Jamaican herbs and spices.</div>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$12/14.94</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Curry Chicken</h4>
+              <div class="menu-detail">A delicious mixture of Jamaican curry, Island herbs spices, and vegetables.</div>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$12/14.94</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Stew Chicken</h4>
+              <div class="menu-detail">Delicately seasoned in a mixture of Island herbs, spices and sauces cooked to perfection</div>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$12/$14.94</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Jerk Chicken and Oxtail Combo</h4>
+              <div class="menu-detail">A mild or spicy combinationof the two best Jamaican dishes</div>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$24</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Ackee and Saltfish</h4>
+              <div class="menu-detail">Jamaican national dish made from the Ackee fruit. Deliciously seasoned with herbs, combine with salt fish to balance the taste, served with rice & peas</div>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$17</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Vegi Platter</h4>
+              <div class="menu-detail">Steamed cabbage served with plaintains, rice & peas, and Jerk sauce, (no meat product in Jerk sauce)</div>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$6.25/$8</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6">
+        <h3 class="menu-heading">Sandwiches</h3>
+
+        <div class="menu">
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">JamRock's Jerk Chicken Sandwiches</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$10</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">JamRock's Fish Sandwiches</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$10</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6">
+        <h3 class="menu-heading">Seafood</h3>
+
+        <div class="menu">
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Tilapia Fish</h4>
+              <div class="menu-detail">Breaded with a special rub, fried to perfection and smothered with sauce of your choice.</div>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$12/$14.94</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Brown Stew Fish</h4>
+              <div class="menu-detail">Snapper(Done to order)</div>
+              <div class="menu-detail">Delicately seasoned in a mixture of Island herbs, spices, vegetables and brown sauce cooked to perfection.</div>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$25</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Steamed Fish </h4>
+              <div class="menu-detail">Snapper(Done to order)</div>
+              <div class="menu-detail">Steamed in a mixture of Island herbs, spices, vegetables, and brown sauce cooked to perfection</div>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$25</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6">
+        <h3 class="menu-heading">Appetizers</h3>
+
+        <div class="menu">
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Jamrock's Jerk Wings(6 wings)</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$12</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Brown Stew Fish</h4>
+              <div class="menu-detail">Snapper(Done to order)</div>
+              <div class="menu-detail">Delicately seasoned in a mixture of Island herbs, spices, vegetables and brown sauce cooked to perfection.</div>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$25</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Steamed Fish </h4>
+              <div class="menu-detail">Snapper(Done to order)</div>
+              <div class="menu-detail">Steamed in a mixture of Island herbs, spices, vegetables, and brown sauce cooked to perfection</div>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$25</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6">
+        <h3 class="menu-heading">Patties</h3>
+
+        <div class="menu">
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Spicy Beef</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$3</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Coco Bread</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$2.75</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6">
+        <h3 class="menu-heading">Sides Only</h3>
+
+        <div class="menu">
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Cabbage</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$4.75</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Fried Plantains</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$4</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Rice & Peas</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$4.75</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6">
+        <h3 class="menu-heading">Dessert</h3>
+
+        <div class="menu">
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Carrot Cake</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$3</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Corn Bread</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$2</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Chocolate Cake</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$3</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Red Velvet Cake</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$3</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6">
+        <h3 class="menu-heading">Jamaican D&G Sodas</h3>
+
+        <div class="menu">
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Pineapple</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$3</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Kola Champagne</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$3</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Ginger Beer</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$3</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Ting</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$3</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6">
+        <h3 class="menu-heading">Juice</h3>
+
+        <div class="menu">
+          <div class="row">
+            <div class="col-sm-8">
+              <h4 class="menu-title">Everfresh Juice</h4>
+            </div>
+            <div class="col-sm-4 menu-price-detail">
+              <h4 class="menu-price">$2</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
   </Layout>
 )
 
